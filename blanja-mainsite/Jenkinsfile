@@ -1,9 +1,0 @@
-/* Requires the Docker Pipeline plugin */
-node('docker') {
-    checkout scm
-    stage('Build') {
-        docker.image('node:9.7.1').inside {
-            sh 'npm --version'
-        }
-    }
-}
