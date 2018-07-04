@@ -1,0 +1,88 @@
+<% layout('../templates/index') %>
+
+<div id="app-header">
+    <app-header :profile=profile></app-header>
+</div>
+
+<div id="fixed-bottom">
+    <fixed-bottom></fixed-bottom>
+</div>
+
+<nav role="navigation" class="nav">
+    <div class="nav-slider-pg"></div>
+</nav>
+
+<div class="swiper-container nav-slider-content">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide nav-slider-content__wrapper">
+            <!-- HOME SECTION START-->
+            <div class="slider-banner-container">
+                <div class="slider-banner-wrapper swiper-wrapper" id="slider-banner">
+                    <% sliderImage.forEach(function(key, value){%>
+                        <div class="swiper-slide">
+                            <a href="<%=key.link%>" title="<%=key.title%>">
+                                <img class="slider-banner__img swiper-lazy" src="<%=profile.staticUrl%>/assets/images/common/default_65x65.jpg" data-src="<%=key.image%>" title="<%=key.title%>">
+                            </a>
+                        </div>
+                    <%})%>       
+                    <div class="swiper-slide">
+                        <a href="#" title="title">
+                            <img class="slider-banner__img swiper-lazy" src="<%=profile.staticUrl%>/assets/images/common/default_65x65.jpg" data-src="https://s.blanja.com/cms/fenu/uploads/images/5c603c3b9a85b893729c6bed13b54408.jpg" title="title">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" title="title">
+                            <img class="slider-banner__img swiper-lazy" src="<%=profile.staticUrl%>/assets/images/common/default_65x65.jpg" data-src="https://s.blanja.com/cms/fenu/uploads/images/main_banner/61a74187ef17e08526e14767fb35c254.jpg" title="title">
+                        </a>
+                    </div>          
+                </div>
+                <div class="swiper-pagination slider-banner__pagination"></div>
+            </div>
+
+            <section class="shortcut-wrapper">
+                
+                <% shortcutIcon.forEach(function(shortcut, value) {%>
+                <div class="shortcut-item">
+                    <a href="<%= shortcut.link%>">
+                        <img class="shortcut-item__img lazyload" title="<%= shortcut.title%>" alt="<%= shortcut.title%>" src="<%=profile.staticUrl%>/assets/images/common/preload_50x50.png" data-src="<%=shortcut.image%>" alt="">
+                        <h3 class="shortcut-item__title"><%= shortcut.title%></h3>
+                    </a>
+                </div>
+                <%});%>
+            </section>
+
+            <div id="daily_deals">
+                <daily-deals></daily-deals>
+            </div>
+            <!-- END HOME SECTION -->
+        </div>
+        <div class="swiper-slide nav-slider-content__wrapper">
+            <div id="best-seller">
+                <best-seller></best-seller>
+            </div>
+        </div>
+        <div class="swiper-slide nav-slider-content__wrapper">
+            <div id="partner">
+                <partner></partner>
+            </div>
+        </div>
+        <div class="swiper-slide nav-slider-content__wrapper">
+            <div id="brand-app">
+                <brand></brand>
+            </div>
+        </div>
+        <div class="swiper-slide nav-slider-content__wrapper">
+            <div id="hot-product">
+                <hot-product></hot-product>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<footer>
+    <%include ../partials/footer%>
+</footer>
+
+
+<!-- <script src="<%= profile.staticUrl %>/mobile/scripts/pages/homepage/homepage.js" async></script> -->

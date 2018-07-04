@@ -1,0 +1,113 @@
+@import 'dev/assets/styles/helpers/variable';
+
+.sidebar{
+    width: 100%;
+    height: 100%;
+    background-color: $absWhite;
+    overflow-y: auto;
+
+    &-wrapper{
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        left: -100vw;
+        right: 0;
+        top: 0;
+        z-index: 5;
+        bottom: 0;
+        transition: left ease .3s;
+    }
+
+    &-overlay{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0,0,0,.5);
+        z-index: 4;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: none;
+        opacity: 0;
+        transition: opacity ease .7s;
+
+        &--show{
+            display: block;
+            opacity: 1;
+            transition: opacity ease .7s;
+        }
+    }
+
+    &-wrapper--show{
+        left: 0;
+        transition: left ease .3s;
+    }
+
+    &-title{
+        background-color: $tomato;
+        color: $absWhite;
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    &-menu{
+        width: 100%;
+
+        &__list{
+            display: block;
+            width: 100%;
+
+            a{
+                display: block;
+                width: 100%;
+                border-top: 0;
+                border-bottom: 1px solid $greyBorder;
+                padding-left: 55px;
+                color: $black;
+                padding: 20px 35px 20px 65px;
+                font-weight: 500;
+                text-decoration: none;
+                position: relative;
+            }
+        }
+
+        &__icon{
+            position: absolute;
+            font-size: 34px;
+            left: 20px;
+            top: 15px;
+            color: $brownish_grey;
+        }
+
+        &__arrow{
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            color: $brownish_grey;
+        }
+
+        &--submenu{
+            display: none;
+            li{
+                background-color: #fafafa;
+
+                a{
+                    padding-left: 35px;
+                }
+            }
+        }
+
+        &--submenu2{
+            display: none;
+            li{
+                background-color: #f2f2f2;
+
+                a{
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+}

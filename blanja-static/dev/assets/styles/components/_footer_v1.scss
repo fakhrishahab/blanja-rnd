@@ -1,0 +1,153 @@
+@import 'assets/styles/helpers/mixin';
+@import 'assets/styles/helpers/variable';
+
+.footer{
+    &-help{
+        margin-top: 20px;
+
+        h3{
+           color: $brownish_grey;
+           font-size: 14px;
+           padding-left: 10px;
+           margin-bottom: 15px; 
+        }
+
+        &-wrapper{
+            background-color: $absWhite;
+            box-shadow: 0 1px 2px 0 rgba(102, 102, 102, 0.2), 0 -1px 0 0 #f0f0f0;
+            margin-bottom: 25px;
+            @include clearfix;
+        }
+
+        &-item{
+            padding: 15px;
+            border-bottom: 1px solid #F0F0F0;
+            display: table;
+            width: 100%;
+            @include clearfix; 
+            min-height: 63px;
+        }
+
+        &-icon{
+            float: left;
+            width: 30px;
+            color: #f8af00;
+            font-size: 20px;
+            margin-right: 20px;
+            padding: 8px 0 0 10px;
+        }
+
+        &-detail{
+            float: left;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        &-title{
+            font-size: 11px;
+            color: $greyLabel;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+
+            a{
+                color: $greyLabel;
+                text-decoration: none;
+                padding-top: 11px;
+                display: block;
+            }
+        }
+
+        &-content{
+            color: $black;
+            font-size: 16px;
+        }
+
+        &-action{
+            float: right;       
+            color: $nominalSoldNote;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding-top: 10px;
+
+            a{
+                text-decoration: none;
+                color: $nominalSoldNote;
+            }
+        }        
+
+    }
+
+    &-payment,
+    &-logistic,
+    &-security,
+    &-awards,
+    &-partner{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        text-align: center;
+
+        img{
+            max-width: 100%;
+        }
+    }
+
+    &-awards{
+        text-align: left;
+        img{
+            max-width: 25%;
+        }
+    }
+
+    &-partner{
+        img{
+            max-width: 90%;
+        }
+    }
+
+    &-link{
+        text-align: center;
+        margin-bottom: 15px;
+        &-list{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li{
+                display: inline-block;
+
+                a{
+                    color: $tomato2;
+                    text-decoration: none;
+                    font-size: 12px;
+                }
+
+                &:after{
+                    content: '-';
+                    position: relative;
+                    display: inline-block;
+                    color: $tomato2;
+                    font-size: 11px;
+                    margin-left: 4px;
+                }
+
+                &:last-child{
+                    &:after{
+                        content: '';
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-copyright{
+        background-color: $absWhite;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #f2f2f2;
+        color: $black;
+        font-size: 12px;
+    }
+}

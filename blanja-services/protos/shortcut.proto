@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "common.proto";
+package com.metraplasa.mobile.mainsite.proto;
+service ShortCutService {
+    rpc getShortCutList(Empty) returns (ShortCutResponse){};
+}
+message ShortCutResponse{
+    Response status = 1;
+    repeated ShortCut data = 2;
+    message ShortCut{
+        string title = 1;
+        string image = 2;
+        string link = 3;
+        string idx = 4;
+    }
+}

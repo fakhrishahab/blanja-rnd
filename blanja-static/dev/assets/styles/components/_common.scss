@@ -1,0 +1,64 @@
+#errorMessage,
+#popDialog {display: none;}
+.popup {
+  z-index: 99999;
+  display:none;
+  background: #fff;
+  top:15%;
+  width: 90%;
+  left: 5%;
+  position: fixed;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.popup .top{
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.popup .pop-content{
+	border-top: 1px solid #ccc;
+    position: relative;
+    *padding: 5% 2%;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.popup .pop-content > p {
+  padding: 5px 30px 0;
+}
+
+.popup .top i.close {
+  	background: url("../../images/icons/icon-close.png") no-repeat scroll 11px 10px / 16px 16px !important;
+    height: 16px;
+    width: 16px;
+    padding: 16px;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    z-index: 2;
+    opacity: 1;
+    display: block;
+}
+
+.popup div {position: relative;}
+
+
+.go-top {
+	position: fixed;
+	bottom:10px;
+	right:10px;
+	display:block;
+	z-index: 69;
+	border-radius: 50%;
+	box-shadow: 0px 0px 1px #CCCCCC;
+	text-decoration: none;}
+.go-top:hover, .go-top:focus {text-decoration: none}
+.tothetop {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-image: url("../img/common/ic-top.png");
+	background-size: 100%;
+}

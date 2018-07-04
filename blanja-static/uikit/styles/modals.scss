@@ -1,0 +1,22 @@
+/* UI Kit - Modals */
+
+@import 'dev-src/commons/styles/helpers/mixin';
+@import 'dev-src/commons/styles/helpers/variable_v1';
+
+.modals{
+  border-radius: 4px;
+  background-color: $white;
+  box-shadow: 0 0 7px 1px rgba(51, 51, 51, 0.12);
+
+  p{
+    font-size: 14px;
+    color: $lightBlack;
+    line-height: 1.43;
+    letter-spacing: 0.2px;
+  }
+
+  &__small{
+    width: 360px;
+    padding: 21px
+  }
+}

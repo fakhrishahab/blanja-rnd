@@ -1,0 +1,124 @@
+/* UI Kit - Typography */
+
+@import 'dev-src/commons/styles/helpers/mixin';
+@import 'dev-src/commons/styles/helpers/variable_v1';
+
+
+.uikit{
+	&-typo{
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		&__wrap{
+			width:850px;
+		}
+		&__boxwrap{
+			margin-bottom: 40px;
+		}
+		&__typeface{
+			h5{
+				font-size: 16px;
+				font-weight: bold;
+				color: $black;
+				margin: 0px 0px 15px;
+			}
+			p.desc{
+				font-size: 16px;
+				line-height: 20px;
+			}
+			div{
+				margin-top: 20px;
+				p{
+					font-size: 18px;
+				    line-height: 30px;
+				    letter-spacing: 2px;
+				    font-weight: bold;
+				}
+			}
+		}
+		&__fontsize{
+			h5{
+				font-size: 16px;
+				font-weight: bold;
+				color: $black;
+				margin: 0px 0px 15px;
+			}
+			li{
+				margin: 0px 0px 30px;
+			}
+			p{
+				color: $black;
+				margin-bottom: 5px;
+				font-weight: bold;
+			}
+			span{
+				color: $lightBlack;
+			}
+			p.eelarge{
+				font-size: 40px;
+				line-height: 44px;
+			}
+			p.elarge{
+				font-size: 30px;
+			    line-height: 34px;
+			}
+			p.large{
+				font-size: 20px;
+			    line-height: 24px;
+			}
+			p.medium{
+				font-size: 16px;
+			    line-height: 20px;
+			}
+			p.small{
+				font-size: 14px;
+			    line-height: 18px;
+			}
+			p.esmall{
+				font-size: 12px;
+			    line-height: 16px;
+			}
+			p.eesmall{
+				font-size: 10px;
+			    line-height: 14px;
+			}
+		}
+		&__fontweight{
+			h5{
+				font-size: 16px;
+				font-weight: bold;
+				color: $black;
+				margin: 0px 0px 15px;
+			}
+			li{
+				margin: 0px 0px 30px;
+				display: inline-block;
+			}
+			p{
+				color: $black;
+				text-align: center;
+    			margin-bottom: 10px;
+    			font-size: 28px;
+    			font-style: normal;
+			    font-weight: normal;
+			    font-stretch: normal;
+			    line-height: normal;
+			}
+			span{
+				color: $lightBlack;
+			}
+			p.reguler{
+				font-style: normal;    
+			}
+			p.italic{
+				font-style: italic;
+			}
+			p.semibold{
+				font-weight: 600;
+			}
+			p.bold{
+				font-weight: bold;
+			}
+		}
+	}
+}

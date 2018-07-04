@@ -1,0 +1,29 @@
+syntax = "proto3";
+import "common.proto";
+
+package com.metraplasa.mobile.mainsite.proto;
+service BestSellerService {
+    rpc getBestSeller(Empty) returns (BestSellerResponse){};
+}
+
+message BestSellerResponse{
+    repeated BestSeller list = 1;
+    message BestSeller{
+        string mobile_img = 1;
+        string mobile_link = 2;
+        string title = 3;
+        string web_img = 4;
+        string web_link = 5;
+        int32 idx = 6;
+        string type = 7;
+        string price = 8;
+        string discount_price = 9;
+        string rating = 10;
+        string discount_rate = 11;
+        string seller_name = 12;
+        string seller_id = 13;
+        string category = 14;
+    }
+
+}
+

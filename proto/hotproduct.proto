@@ -1,0 +1,24 @@
+syntax = "proto3";
+import "common.proto";
+
+package com.metraplasa.mobile.mainsite.proto;
+
+service HotProductService {
+    rpc getHotProducts(Empty) returns (HotProductResponse){};
+}
+message HotProductResponse{
+    message HotProduct {
+        int32 sort_all_idx = 1;
+        int32 sort_category_idx = 2;
+        string category = 3;
+        string image = 4;
+        string title = 5;
+        double origin_price = 6;
+        double discount_price = 7;
+        float discount_rate = 8;
+        string promo_icon = 9;
+        string link = 10;
+    }
+
+    repeated HotProduct list =1;
+}

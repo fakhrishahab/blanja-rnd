@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
+	<link rel="stylesheet" href="<% res1Url%>/uikit/styles/styleguide.css">
+	<script src="https://unpkg.com/vue"></script>
+	
+</head>
+<body>
+	<% include ../partials/header %>
+	<!-- <div id="app" @click="test()">
+		<app-header>{{title}}</app-header>
+	</div> -->
+	<div class="blj-container content-wrapper">
+		<div class="row">
+			<div class="col-9">
+					
+				<%- body -%>
+								
+			</div>
+
+			<div class="col-3">
+				<div class="content-nav">
+					<ul class="content-nav__menu" id="staticMenu">
+						<li class="content-nav__menu-item">
+							<a href="#grid_system">Grid System</a>
+						</li>
+						<li class="content-nav__menu-item">
+							<a href="#input_field">Input Field</a>
+							<ul>
+								<li><a href="#input_field_text">Text Field</a></li>
+								<li><a href="#input_field_select">Select Box</a></li>
+								<li><a href="#input_field_checkbox">Checkbox</a></li>
+								<li><a href="#input_field_radio">Radio Button</a></li>
+							</ul>
+						</li>
+						<li class="content-nav__menu-item">
+							<a href="">Button</a>
+						</li>
+						<li class="content-nav__menu-item">
+							<a href="">Modal</a>
+						</li>						
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<script src="<%- res1Url%>/uikit/scripts/styleguide.js"></script>
+</body>
+</html>

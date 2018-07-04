@@ -1,0 +1,12 @@
+@import 'reset';
+@import 'normalize';
+@import '../helpers/variable_v1';
+@import '../helpers/mixin';
+
+.relative{
+	position: relative;
+}
+
+.text-center{
+	text-align: center;
+}

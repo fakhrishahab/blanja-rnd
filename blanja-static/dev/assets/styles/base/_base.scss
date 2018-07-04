@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import 'common';
+@import 'assets/styles/helpers/variable'
+
+// ::after, ::before{
+// 	box-sizing: border-box;
+// }
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro';
+	font-weight: normal;
+	background-color: $darkWhite;
+}

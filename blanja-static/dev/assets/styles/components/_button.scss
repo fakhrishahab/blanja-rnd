@@ -1,0 +1,59 @@
+@import 'assets/styles/helpers/variable';
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &-primary {
+    background: $tomato;
+    color: $absWhite;
+    font-size: 16px;
+    font-weight: bold;
+
+    &.disabled {
+      color: $tomato;
+      background-color: #fce8e8;
+      cursor: not-allowed;
+    }
+  }
+
+  &-full {
+    width: 100%;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  &-red {
+    background-color: #E2211D;
+    border-color: #E2211D;
+    color: #fff;
+  }
+  &-red:hover,
+  &-red:focus{
+    color: #fff;
+    background-color: #CC1B18;
+    border-color: #CC1B18;
+  }
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "common.proto";
+package com.metraplasa.mobile.mainsite.proto;
+service WideRollingService {
+    rpc getWideRollingList(Empty) returns (WideRollingResponse){};
+}
+message WideRollingResponse{
+    Response status = 1;
+    repeated WideRolling data = 2;
+    message WideRolling{
+        string mobile_img = 1;
+        string mobile_link = 2;
+        string mobile_title = 3;
+        string idx = 4;
+        string seq = 5;
+    }
+}

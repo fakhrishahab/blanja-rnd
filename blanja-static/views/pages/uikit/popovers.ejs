@@ -1,0 +1,162 @@
+<% layout('../../layouts/uikit_v1') %>
+
+<section>
+  <h1>Popover & Tooltips</h1>
+    <h2>Tooltips</h2>
+    <p class="uikit__small-description">Tooltips are used to show an instruction or simple message when user hover on trigger element</p>
+</section>
+
+<div id="app-tooltip">
+<section>
+  <div class="relative input-wrapper">
+    <input placeholder="Hover for right tooltips" type="text" v-tooltips="{message : isi , position: 'right' }" class="tooltips-trigger">
+  </div>
+
+  <div class="relative input-wrapper">
+    <input placeholder="Hover for right left" type="text" style="width:180px" v-tooltips="{ message: 'Isi password dengan huruf, angka dan symbol', position: 'left' }" class="tooltips-trigger">
+  </div>
+
+  <div class="relative input-wrapper">
+    <input placeholder="Hover for top tooltips" type="text" v-tooltips="{ message: 'Isi password dengan huruf, angka dan symbol', position: 'top' }" class="tooltips-trigger">
+  </div>
+
+  <div class="relative input-wrapper">
+    <input placeholder="Hover for bottom tooltips" type="text" v-tooltips="{ message: 'Isi password dengan huruf, angka dan symbol', position: 'bottom' }" class="tooltips-trigger">
+  </div>
+
+  <span class="relative" style="width:4px">
+    <a v-tooltips="{ message: 'Ini tooltip untuk icon', position: 'bottom' }" class="tooltips-trigger icon-alert">i</a>
+  </span>
+  this icon will show a tooltips at the bottom of it's icon. And hover on
+  <span class="relative">
+    <a v-tooltips="{message: 'Ini test'}" class="tooltips-trigger tooltips-link">this</a>
+  </span>
+  to see a default position of tooltips
+  <br><br>
+</section>
+
+<div class="uikit-code">
+    <p>How to use</p>
+
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Import tooltips style into your .SCSS file</p>
+        <code class="uikit-code__use-example">
+          @import <span class="uikit-code__vue-variable">'dev-src/desktop/styles/components/tooltips'</span>;
+        </code>
+    </div>
+
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Import tooltips directive into your .JS file</p>
+        <code class="uikit-code__use-example">
+          import <span class="uikit-code__vue-variable">{tooltips}</span> from <span class="uikit-code__vue-variable">'@/desktop/scripts/directives/tooltips'</span>;
+        </code>
+    </div>
+
+    <div class="uikit__small-spacer">
+        <p class="uikit__small-description">See the code below</p>
+      <code>
+      <span class="uikit-code__vue-component">&#60;input </span>
+      <span class="uikit-code__vue-directives">v-tooltips=</span>
+      <span class="uikit-code__vue-variable">"{ message: 'Isi password dengan huruf, angka dan symbol', position: 'bottom' }" </span>
+      <span class="uikit-code__vue-directives">type=</span>
+      <span class="uikit-code__vue-variable">"text"</span>
+      <span class="uikit-code__vue-directives">class=</span>  
+      <span class="uikit-code__vue-variable">"tooltips-trigger"</span>
+      <span class="uikit-code__vue-component">></span>
+      </code>
+    </div>
+    <p class="uikit__small-description">You have to add <span class="uikit-code__vue-variable"><strong>'v-tooltips'</strong></span> directive to initialize a tooltips element and also adding class <span class="uikit-code__vue-variable"><strong>'tooltips-trigger'</strong></span> to listen the hover event</p>
+
+    <p class="uikit__small-description">Define a message and position of tooltips with Object Literal Data. This is the list of options :</p>
+    <ul class="uikit__unordered-list">
+        <li><span class="uikit-code__vue-variable">Message</span> to set a tooltips message</li>
+        <li><span class="uikit-code__vue-variable">Position</span> to set display location based on trigered element (eg 'top', 'bottom', 'left', 'right'). <i>Default: 'right'</i></li>
+    </ul> 
+</div>
+
+<section>
+  <div class="uikit-code">
+    <br>
+    <p>Notes</p>
+    <p class="uikit__small-description">You have to wrap a triggered element with relative position to display a tooltips well like this</p>
+
+    <div class="uikit__small-spacer">
+        <code>
+          <span class="uikit-code__vue-component">&#60;div </span>
+          <span class="uikit-code__vue-directives">class=</span>  
+        <span class="uikit-code__vue-variable">"relative"><br> </span>
+        <span class="uikit-code__vue-component uikit-code--tab20">&#60;input </span>
+        <span class="uikit-code__vue-directives">v-tooltips=</span>
+        <span class="uikit-code__vue-variable">"{ message: 'Isi password dengan huruf, angka dan symbol', position: 'bottom' }" </span>
+        <span class="uikit-code__vue-directives">type=</span>
+        <span class="uikit-code__vue-variable">"text"</span>
+        <span class="uikit-code__vue-directives">class=</span>  
+        <span class="uikit-code__vue-variable">"tooltips-trigger"</span>  
+        <span class="uikit-code__vue-component">><br></span>
+        <span class="uikit-code__vue-component">&#60;/div></span>
+        </code>
+      </div>
+   </div>
+</section>
+
+<section>
+    <h2>Popover</h2>
+    <p class="uikit__small-description">Popover are used to show an instruction or simple message when user click on triggered element</p>
+</section>
+
+<section>
+  <button class="relative popover-btn--inline" v-popovers="{message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tria genera cupiditatum, naturales et necessariae, naturalenis.', title: 'Content Title'}">Click Here</button>
+  
+  <button class="relative popover-btn--inline" v-popovers="{message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tria genera cupiditatum, naturales et necessariae, naturalenis.'}">Click Here Without Title</button>
+</section>
+
+<section>
+  <br>
+  <span class="relative" style="width:4px">
+    <a v-popovers="{ message: 'Ini tooltip untuk icon', title: 'bottom' }" class="icon-alert">i</a>
+  </span>
+  this icon will show a tooltips at the bottom of it's icon. And click on
+  <span class="relative">
+    <a v-popovers="{message: 'Ini test'}" class="tooltips-link">this</a>
+  </span>
+  to see a default position of tooltips
+  <br><br>
+</section>
+
+<div class="uikit-code">
+    <p>How to use</p>
+
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Import popover style into your .SCSS file</p>
+        <code class="uikit-code__use-example">
+          @import <span class="uikit-code__vue-variable">'dev-src/desktop/styles/components/popovers'</span>;
+        </code>
+    </div>
+
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Import popovers directive into your .JS file</p>
+        <code class="uikit-code__use-example">
+          import <span class="uikit-code__vue-variable">{popovers}</span> from <span class="uikit-code__vue-variable">'@/desktop/scripts/directives/popovers'</span>;
+        </code>
+    </div>
+
+    <div class="uikit__small-spacer">
+        <p class="uikit__small-description">See the code below</p>
+      <code>
+      <span class="uikit-code__vue-component">&#60;button </span>
+      <span class="uikit-code__vue-directives">v-popovers=</span>
+      <span class="uikit-code__vue-variable">"{ message: 'Tekan tombol ini untuk mendapatkan informasi detail mengenai syarat dan ketentuan', Title: 'Perhatian' }" </span>
+      <span class="uikit-code__vue-directives">class=</span>  
+      <span class="uikit-code__vue-variable">"relative"</span>
+      <span class="uikit-code__vue-component">></span>
+      </code>
+    </div>
+
+    <p class="uikit__small-description">Define a message and title of tooltips with Object Literal Data. This is the list of options :</p>
+    <ul class="uikit__unordered-list">
+        <li><span class="uikit-code__vue-variable">Message</span> to set a popover message</li>
+        <li><span class="uikit-code__vue-variable">Title</span> to set a popover title, leave it empty or remove this object to hide the title section</li>
+    </ul> 
+</div>
+
+</div>

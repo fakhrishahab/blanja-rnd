@@ -1,0 +1,157 @@
+<% layout('../../layouts/uikit_v1') %>
+
+<section>
+	<h1>Alert</h1>
+  <h2>Toast</h2>
+  <p class="uikit__small-description">Toast Alert is used to deliver messages when a user performs an action. eg when adding a wishlist or have removed the product.</p>
+</section>
+
+<section>
+  <div class="uikit-design">
+    <div class="alert-toast alert-toast__success">
+      <p>Barang berhasil ditambahkan sebagai favorit.</p>
+      <i class="bl-close alert-toast__close"></i>
+    </div>
+    <p class="uikit-design__description">Success/Positive</p>
+  </div>
+  <div class="uikit-design">
+    <div class="alert-toast alert-toast__info">
+      <p>Silakan masuk ke akun Anda terlebih dahulu!</p>
+      <i class="bl-close alert-toast__close"></i>
+    </div>
+    <p class="uikit-design__description">Information/Warning Message</p>
+  </div>
+  <div class="uikit-design">
+    <div class="alert-toast alert-toast__error">
+        <p>Email yang anda masukan belum terverifikasi.</p>
+        <i class="bl-close alert-toast__close"></i>
+      </div>
+      <p class="uikit-design__description">Error/Failed</p>
+  </div>
+
+  <div class="uikit-code">
+    <p>How to use</p>
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Import toast.js to working js page.</p>
+      <code class="uikit-code__use-example">
+          import <span class="uikit-code__vue-variable">alertToast</span> from <span class="uikit-code__vue-variable">'@/desktop/scripts/components/alert/toast'</span>;
+      </code>
+    </div>
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Define components name on vue instance.</p>
+      <code class="uikit-code__use-example">
+          components: {<br/>
+          &emsp;&emsp;<span class="uikit-code__vue-variable">alertToast</span><br/>
+          },
+      </code>
+    </div>
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Copy component below to .ejs template.</p>
+      <code class="uikit-code__use-example">
+          <span class="uikit-code__vue-component">&#60;alert-toast </span><span class="uikit-code__vue-directives">:ref=</span><span class="uikit-code__vue-variable">"toast"</span><span class="uikit-code__vue-component">>&#60;/alert-toast></span>
+      </code>
+    </div>
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">And use code below on vue instance to call methods inside Alert Toast component.</p>
+      <code class="uikit-code__use-example">
+        <span class="uikit-code__vue-component">this</span><span class="uikit-code__vue-directives">.$refs</span><span class="uikit-code__vue-component">.toast</span><span class="uikit-code__vue-directives">.showToast(<span class="uikit-code__vue-variable">status</span>,<span class="uikit-code__vue-variable">message</span>);</span>
+      </code>
+    </div>
+    <!-- <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Use code below if you want to call Alert Toast from .ejs event</p>
+      <code class="uikit-code__use-example">
+          <span class="uikit-code__vue-directives">alertToast(<span class="uikit-code__vue-variable">"Status"</span>,<span class="uikit-code__vue-variable">"Message"</span>);</span>
+      </code>
+    </div> -->
+  </div>
+</section>
+
+<section id="alert-toast" class="uikit__component-example">
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Active Alert Toast Example:</p>
+      <button @click="alertToast('success','Ini Toast Alert !')">Click Me!</button>
+    </div>
+    
+    <alert-toast ref="toast"></alert-toast>
+</section>
+
+<section>
+  <h2>Information</h2>
+  <p class="uikit__small-description">This is used to inform the user that there are new features, promos or other important information.</p>
+</section>
+
+<section>
+    <div class="uikit-design">
+      <div class="uikit__small-spacer">
+        <div class="alert-information">
+          <i class="bl-error alert-information__icon"></i>
+          <p>Anda mendapat kode voucher untuk potongan 25% tiap pembelanjaan min. 200rb. Lihat Kode disini!</p>
+          <i class="bl-close alert-information__close"></i>
+        </div>
+      </div>
+      <div class="uikit__small-spacer">
+        <div class="alert-information">
+          <i class="bl-error alert-information__icon"></i>
+          <p>Anda mendapat kode voucher untuk potongan 25% tiap pembelanjaan min. 200rb ! Lihat kode sekarang!
+            <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ille pellit, qui permulcet sensum voluptate. Multoque hoc melius nos veriusque quam </p>
+          <i class="bl-close alert-information__close"></i>
+        </div>
+        <p class="uikit-design__description">2 line text</p>
+      </div>
+      <div class="uikit__small-spacer">
+        <div class="alert-information">
+          <i class="bl-error alert-information__icon"></i>
+          <p>Anda mendapat kode voucher untuk potongan 25% tiap pembelanjaan min. 200rb ! Lihat kode sekarang!
+            <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ille pellit, qui permulcet sensum voluptate. Multoque hoc melius nos veriusque quam Stoici. Quam ob rem tandem, inquit, non satisfacit? Duo Reges: constructio interrete. Omnium enim rerum principia parva sunt, sed suis progress</p>
+          <i class="bl-close alert-information__close"></i>
+        </div>
+        <p class="uikit-design__description">3 line text</p>
+      </div>
+    </div>
+
+    <div class="uikit-code">
+      <p>How to use</p>
+      <div class="uikit__small-spacer">
+        <p class="uikit__small-description">Import information.js to working js page.</p>
+        <code class="uikit-code__use-example">
+            import <span class="uikit-code__vue-variable">alertInformation</span> from <span class="uikit-code__vue-variable">'@/desktop/scripts/components/alert/information'</span>;
+        </code>
+      </div>
+      <div class="uikit__small-spacer">
+        <p class="uikit__small-description">Define components name on vue instance.</p>
+        <code class="uikit-code__use-example">
+            components: {<br/>
+            &emsp;&emsp;<span class="uikit-code__vue-variable">alertInformation</span><br/>
+            },
+        </code>
+      </div>
+      <div class="uikit__small-spacer">
+        <p class="uikit__small-description">Copy component below to .ejs template. Set initial <span class="uikit-code__vue-variable">message</span> with "String".</p>
+        <code>
+            <span class="uikit-code__vue-component">&#60;alert-information
+            <span class="uikit-code__vue-directives"> :ref=</span><span class="uikit-code__vue-variable">"information"</span>
+            <span class="uikit-code__vue-directives"> message=</span><span class="uikit-code__vue-variable">"Message"</span>>&#60;/alert-information></span>
+        </code>
+      </div>
+      <div class="uikit__small-spacer">
+        <p class="uikit__small-description">And use code below on vue instance to call methods inside Alert Information component.</p>
+        <code class="uikit-code__use-example">
+          <span class="uikit-code__vue-component">this</span><span class="uikit-code__vue-directives">.$refs</span><span class="uikit-code__vue-component">.information</span><span class="uikit-code__vue-directives">.showInformation(<span class="uikit-code__vue-variable">message</span>);</span>
+        </code>
+      </div>
+      <!-- <div class="uikit__small-spacer">
+        <p class="uikit__small-description">And copy code below in vue instance to call Alert Information.</p>
+        <code class="uikit-code__use-example">
+            <span class="uikit-code__vue-directives">alertInformation(<span class="uikit-code__vue-variable">"Message"</span>);</span>
+        </code>
+      </div> -->
+    </div>
+</section>
+
+<section id="alert-information" class="uikit__component-example">
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Active Alert Information Example :</p>
+      <button @click="alertInformation('Information Toast Triggered !')">Click Me !</button>
+    </div>
+    <alert-information ref="information" message="Anda mendapat kode voucher untuk potongan 25% tiap pembelanjaan min. 200rb. Lihat Kode disini!"></alert-toast>
+</section>

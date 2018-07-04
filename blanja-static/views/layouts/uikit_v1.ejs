@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
+	<link rel="stylesheet" href="<%- res1Url%>/uikit/styles/uikit.css">
+	<script src="https://unpkg.com/vue"></script>
+	
+</head>
+<body>
+	
+	<div class="blj-container">
+		<div class="row">
+			<div class="uikit-sidebar">
+				<% include ../partials/sidebar_v1 %>		
+			</div>
+
+			<div class="uikit-content">		
+				<%- body -%>
+			</div>
+		</div>		
+	</div>
+	
+	
+	<script src="<%- res1Url%>/uikit/scripts/uikit.js"></script>
+</body>
+</html>

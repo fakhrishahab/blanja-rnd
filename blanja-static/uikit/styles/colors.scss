@@ -1,0 +1,145 @@
+/* UI Kit - Colors */
+
+@import 'dev-src/commons/styles/helpers/mixin';
+@import 'dev-src/commons/styles/helpers/variable_v1';
+
+.uikit{
+	&-colors{
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		&__wrap{
+			width:850px;
+		}
+		&__boxwrap{
+			padding: 0px 0px 20px;
+		}
+
+		&__redwrap{
+			padding-right:10px;
+		}
+
+		&__blackwrap{
+			padding-left:30px;
+		}
+
+		&__list{
+			width: 100%;
+
+			li{
+				width: 100%;
+				height: 100px;
+				border-radius: 4px;
+				padding: 10px;
+				font-size: 14px;
+
+				p{
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+
+			li.lightred{
+				background-color: $lightRed;
+			}
+			li.redblanja{
+				background-color: $redBlanja;
+			}
+			li.darkredblanja{
+				background-color: $darkRedBlanja;
+			}
+			li.darkwhite{
+				background-color: $darkWhite;
+			}
+			li.extra2lightgrey{
+				background-color: $extra2LightGrey;
+			}
+			li.extralightgrey{
+				background-color: $extraLightGrey;
+			}
+			li.lightgrey{
+				background-color: $lightGrey;
+			}
+			li.grey{
+				background-color: $grey;
+			}
+			li.darkgrey{
+				background-color: $darkGrey;
+			}
+			li.lightblack{
+				background-color: $lightBlack;
+			}
+			li.black{
+				background-color: $black;
+			}
+			li.darkblack{
+				background-color: $darkBlack;
+			}
+		}
+
+		&__listbottom{
+			width: 100%;
+
+			li{
+				width: 23%;
+				height: 95px;
+				margin-right: 1%;
+				display: inline-block;
+				border-radius: 4px;
+				padding: 10px;
+			
+				p{
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+
+			li.blue{
+				background-color: $blue;
+			}
+			li.positive{
+				background-color: $positive;
+			}
+			li.negative{
+				background-color: $negative;
+			}
+			li.warning{
+				background-color: $warning;
+			}
+			li.lightblue{
+				background-color: $lightBlue;
+			}
+			li.lightpositive{
+				background-color: $lightPositive;
+			}
+			li.lightnegative{
+				background-color: $lightNegative;
+			}
+			li.lightwarning{
+				background-color: $lightWarning;
+			}
+		}
+
+		&__white{
+			color: $darkWhite;
+		}
+
+		&__red{
+			color: $redBlanja;
+		}
+
+		&__listdesc{
+			li{
+				width: 100%;
+				height: 100px;
+				padding: 35px 0px 0px 20px;
+
+				p{
+					font-size: 14px;
+					line-height: 18px;
+					color: $lightBlack;
+				}
+			}
+		}
+	}
+}

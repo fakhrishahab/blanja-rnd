@@ -1,0 +1,84 @@
+@import 'dev/assets/styles/helpers/variable';
+
+.modal{
+    &-search{
+        &__wrapper{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left:0;
+            top: 0;
+            background-color: #fafafa;
+            z-index: 2;
+        }
+
+        &__header{
+            background-color: $absWhite;
+            border-bottom: 1px solid $greyBorder;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            height: 55px;
+            top: 0;
+            left: 0;
+        }
+
+        &__back{
+            position: absolute;
+            left: 20px;
+            top: 18px;
+            width: 35px;
+        }
+
+        &__btn{
+            &-back{
+                font-size: 22px;
+                color: $black;
+            }
+
+            &-search{
+                border: none;
+                background: transparent;
+                font-size: 24px;
+                position: absolute;
+                top: 5px;
+                color: $brownish_grey;
+            }
+
+            &-delete{
+                position: absolute;
+                top: 10px;
+                font-size: 16px;
+                color: $brownish_grey;
+                right: 0;
+            }
+        }
+
+        &__form{
+            position: relative;
+            width: calc(100%-35px);
+            margin-left: 30px;
+            height: 35px;
+        }
+
+        &__input{
+            height: 35px;
+            padding-left: 45px;
+            font-size: 13px;
+            outline: none!important;
+            overflow: hidden;
+            width: calc(100% - 35px);
+            border: none;
+            -webkit-appearance: none;
+            -webkit-transition: text-indent ease-in-out .15s;
+            transition: text-indent ease-in-out .15s;
+        }
+    }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}

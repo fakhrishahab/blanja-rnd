@@ -1,0 +1,32 @@
+{
+  "name": "blanja-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "babel-node --presets es2015 server.js",
+    "pm2": "pm2 start npm -- dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "grpc": "^1.10.1",
+    "http-proxy": "^1.16.2",
+    "path": "^0.12.7",
+    "redis": "^2.8.0",
+    "redis-server": "^1.2.0",
+    "response-time": "^2.3.2",
+    "siege": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.2",
+    "os": "^0.1.1"
+  }
+}

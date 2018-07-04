@@ -1,0 +1,33 @@
+syntax = "proto3";
+import "common.proto";
+package com.metraplasa.mobile.mainsite.proto;
+service MenuService {
+    rpc getMenu(Empty) returns (NavTreeResponse){};
+}
+message NavTreeResponse{
+    Response status = 1;
+    message NavTree{
+        int64 id =1 ;
+        string name=2 ;
+        int64 sortNo=3 ;
+        string url= 4;
+        string urlLable=5 ;
+        string mobileUrl= 6;
+        string mobileUrlLable= 7;
+        int64 level= 8;
+        string adImage=9 ;
+        string adUrl= 10;
+        int64 parentId= 11;
+        int64 status= 12;
+        int64 statusradio= 13;
+        string createTime= 14;
+        string modifyTime= 15;
+        repeated NavTree child= 16;
+        int64 opened= 17;
+        string title= 18;
+        string description= 19;
+        string seo= 20;
+        string paramJson=21 ;
+    }
+    repeated NavTree data = 2;
+}

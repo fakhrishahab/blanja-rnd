@@ -1,0 +1,39 @@
+<%
+	function getClass(menu){
+		var klas = page.replace('/','');
+		if(klas == menu){
+			return "class=active";
+		}
+		return '';
+		
+	}
+%>
+
+<aside class="sidebar">
+	<div class="sidebar-wrapper">
+		<div class="sidebar-header">
+			UI Kit V.1
+		</div>
+
+		<div class="sidebar-menu">
+			<ul class="sidebar-menu__list">
+				<li <%= getClass('')%>><a href="<%- res1Url%>/uikit/v1/">Grid</a></li>
+				<li <%= getClass('font-icon')%>><a href="<%- res1Url%>/uikit/v1/font-icon">Font-icon</a></li>
+				<li <%= getClass('typography')%>><a href="<%- res1Url%>/uikit/v1/typography">Typography</a></li>
+				<li <%= getClass('colors')%>><a href="<%- res1Url%>/uikit/v1/colors">Colors</a></li>
+				<li <%= getClass('accordion')%>><a href="<%- res1Url%>/uikit/v1/accordion">Accordion</a></li>
+				<li <%= getClass('alert')%>><a href="<%- res1Url%>/uikit/v1/alert">Alert</a></li>
+				<li <%= getClass('badges')%>><a href="<%- res1Url%>/uikit/v1/badges">badges</a></li>
+				<li <%= getClass('button')%>><a href="<%- res1Url%>/uikit/v1/button">Button</a></li>
+				<li <%= getClass('card')%>><a href="<%- res1Url%>/uikit/v1/card">card</a></li>
+				<li <%= getClass('carousel')%>><a href="<%- res1Url%>/uikit/v1/carousel">carousel</a></li>
+				<li <%= getClass('form')%>><a href="<%- res1Url%>/uikit/v1/form">Form Elements</a></li>
+				<li <%= getClass('checkbox')%>><a href="<%- res1Url%>/uikit/v1/checkbox">checkbox</a></li>
+				<li <%= getClass('list')%>><a href="<%- res1Url%>/uikit/v1/list">list</a></li>
+				<li <%= getClass('modals')%>><a href="<%- res1Url%>/uikit/v1/modals">Modals</a></li>
+				<li <%= getClass('navigation')%>><a href="<%- res1Url%>/uikit/v1/navigation">navigation</a></li>
+				<li <%= getClass('popovers')%>><a href="<%- res1Url%>/uikit/v1/popovers">Popovers & Tooltips</a></li>
+			</ul>
+		</div>
+	</div>
+</aside>

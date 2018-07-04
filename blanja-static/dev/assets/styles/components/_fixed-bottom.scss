@@ -1,0 +1,47 @@
+@import 'dev/assets/styles/helpers/variable';
+
+.menu{
+    &-bottom{
+        position: fixed;
+        display: table;
+        bottom: 0;
+        width: 100%;
+        background-color: $absWhite;     
+        height: 50px;   
+        border-top: 1px solid #f2f2f2;
+        z-index: 2;
+
+        &__item{
+            display: table-cell;
+            width: 25%;
+            box-sizing: border-box;
+            text-align: center;
+            vertical-align: middle;
+
+            a{
+                text-decoration: none;
+                color: $tomato2;
+                height: 30px;
+                display: block;
+                padding-top: 3px;
+            }
+
+            &--active{
+                background-color: $tomato;
+
+                a{
+                    color: $absWhite;   
+                }                
+            }
+        }
+
+        &__icon{
+            font-size: 28px;
+        }
+    }
+}
+
+.loadingZenbox{
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,38 @@
+syntax = "proto3";
+package com.metraplasa.mobile.mainsite.proto;
+
+service HomeService {
+    rpc getIndex(Member) returns (HomeResponse){};
+}
+
+message HomeResponse{
+    string hashed_email_criteo =1;
+    string intercomm_base_url =2;
+}
+
+message Member{
+    int64 id =1;
+    string nick=2;
+    string email=3;
+    bool email_verified=4;
+    string mobile_phone=5;
+    bool mobile_verified=6;
+    string password=7;
+    string lifecycle=8;
+    string create_time=9;
+    string modify_time=10;
+    string identifying=11;
+    string type=12;
+    string facebook_id=13;
+    string redirect_url=14;
+    string source_method=15;
+    string login_ip=16;
+    string browser=17;
+    string resolution=18;
+    string access_token=19;
+    string picture_url=20;
+    int32 rememb_pwd=21;
+    string gender=22;
+    string first_name=23;
+    string last_name=24;
+}

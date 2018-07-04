@@ -1,0 +1,27 @@
+syntax = "proto3";
+import "common.proto";
+
+package com.metraplasa.mobile.mainsite.proto;
+
+service DailyDealsService {
+    rpc getDailyDeals(Empty) returns (DailyDealsResponse){};
+}
+
+message DailyDealsResponse{
+    message FixImg{
+        string mobile_img = 1;
+    }
+    repeated FixImg fix_img =1;
+    repeated DailyDeals list = 2;
+    message DailyDeals{
+        string mobile_img =1;
+        string mobile_link = 2;
+        string title = 3;
+        double origin_price =4;
+        double discount_price =5;
+        float discount_rate=6;
+        int32 star =7;
+        int32 idx =8;
+    }
+}
+

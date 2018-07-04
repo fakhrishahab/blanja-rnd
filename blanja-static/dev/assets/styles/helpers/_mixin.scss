@@ -1,0 +1,75 @@
+/* Mixin */
+
+@mixin clearfix{
+	&:after{
+		clear: both;
+		content: '';
+		display: block;
+	}
+}
+
+@mixin spin($deg){
+	@-moz-keyframes spin { 100% { -moz-transform: rotate($deg+deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate($deg+deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate($deg+deg); transform:rotate($deg+deg); } }
+}
+
+@mixin colorOpacity($color, $opacity){
+	// background-color: mix($color, $opacity);
+	background-color: rgba($color, $opacity);
+}
+
+@mixin translateCenter{
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@mixin translateVertical{
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin translateHorizontal{
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+@mixin animateEaseOut{
+	-webkit-transition: top 0.6s cubic-bezier(0, 0, 0.2, 1);
+	-moz-transition: top 0.6s cubic-bezier(0, 0, 0.2, 1);
+	transition: top 0.6s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@mixin BgGradient{
+	background: linear-gradient(225deg, $greyBorder, $greyBorder, $white, $greyBorder, $greyBorder);
+	background-size: 100% 800%;
+	-webkit-animation: Gradient 1s ease infinite;
+	-moz-animation: Gradient 1s ease infinite;
+	animation: Gradient 1s ease infinite;
+}
+
+
+@-webkit-keyframes Gradient {
+	0%{background-position:0% -50%}
+    50%{background-position:0% 50%}
+    100%{background-position:0% 150%}
+}
+
+@-moz-keyframes Gradient {
+	0%{background-position:0% -50%}
+    50%{background-position:0% 50%}
+    100%{background-position:0% 150%}
+}
+
+@keyframes Gradient {
+	0%{background-position:0% -50%}
+    50%{background-position:0% 50%}
+    100%{background-position:0% 150%}
+}

@@ -1,0 +1,641 @@
+<% layout('../../layouts/uikit_v1') %>
+
+<section>
+	<h1>Form Elements</h1>
+</section>
+
+<section>
+  <div>
+    <h3>Rules :</h3>
+    <ol class="uikit__ordered-list uikit__rules">
+        <li>Space between fields is 20px.</li>
+        <li>Placeholder only used when required. (Example : Name field, address, no need to use any placeholder.)</li>
+        <li>Maximum row for <b class="bold">Select Field</b> is 10 rows, and Maximum row for <b class="bold">Text Area</b> is 4 rows. If it more than maximum, use scroll.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="uikit-design blj-container">
+    <div class="row">
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>Text Input</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-text">
+            <input type="text" placeholder="Placeholder" class="form">
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-text">
+            <input type="text" placeholder="Placeholder" value="Value" class="form">
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-text">
+            <input type="text" placeholder="Placeholder" value="Error" class="form form-icon form__error">
+            <i class="bl-icon"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-text">
+            <input type="text" placeholder="Placeholder" value="Success" class="form form-icon form__success">
+            <i class="bl-icon"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-text">
+            <input type="text" placeholder="Placeholder" value="Disabled" class="form" disabled>
+            <i class="bl-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>With Left Icon</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-text">
+            <input type="text" placeholder="Placeholder" class="form">
+            <i class="bl-icon__left bl-calendar"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-text">
+            <input type="text" placeholder="Placeholder" value="Value" class="form">
+            <i class="bl-icon__left bl-account"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-text">
+            <input type="text" placeholder="Placeholder" value="Error" class="form form-icon form__error">
+            <i class="bl-icon__left bl-phone-fill"></i>
+            <i class="bl-icon"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-text">
+            <input type="text" placeholder="Placeholder" value="Success" class="form form-icon form__success">
+            <i class="bl-icon__left bl-phone-fill"></i>
+            <i class="bl-icon"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-text">
+            <input type="text" placeholder="Placeholder" value="Disabled" class="form" disabled>
+            <i class="bl-icon__left bl-phone-fill"></i>
+            <i class="bl-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>With Right Icon</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-right form-text">
+            <input type="text" placeholder="Placeholder" class="form">
+            <i class="bl-icon__right bl-search"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-right form-text">
+            <input type="text" placeholder="Placeholder" value="Value" class="form">
+            <i class="bl-icon__right bl-search"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-right form-text">
+            <input type="text" placeholder="Placeholder" value="Error" class="form form__error">
+            <i class="bl-icon__right bl-search"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-right form-text">
+            <input type="text" placeholder="Placeholder" value="Success" class="form form__success">
+            <i class="bl-icon__right bl-search"></i>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-right form-text">
+            <input type="text" placeholder="Placeholder" value="Disabled" class="form" disabled>
+            <i class="bl-icon__right bl-search"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="uikit-code">
+    <p>How to use</p>
+    <div class="uikit__small-spacer">
+      <p class="uikit__small-description">Import form.scss to working css page</p>
+      <code>@import 'dev-src/desktop/styles/components/form';</code>
+    </div>
+    <div class="uikit__small-spacer uikit-code__rollable">
+      <span class="uikit-code__rollable-roller" @click="rollCode"><i class="bl-arrow-reverse-outline"></i></span>
+      <code :class="{'uikit-code__rollable-rollup': isCodeRolled}">
+        <span class="uikit-code__vue-variable">Text Input</span><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" value="Value" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form-icon form__error"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form-icon form__success"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span> disabled><br/>
+        &#60;/div><br/><br/>
+      </code>
+    </div>
+    <div class="uikit__small-spacer uikit-code__rollable">
+      <span class="uikit-code__rollable-roller" @click="rollCode"><i class="bl-arrow-reverse-outline"></i></span>
+      <code :class="{'uikit-code__rollable-rollup': isCodeRolled}">
+        <span class="uikit-code__vue-variable">Text Input With Left Icon</span><br/><br/>
+        &#60;div class="form-group form-group__icon-left form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__left bl-calendar"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-left form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" value="Value" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__left bl-account"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-left form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form-icon form__error"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__left bl-phone-fill"</span>>&#60;/i><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-left form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form-icon form__success"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__left bl-phone-fill"</span>>&#60;/i><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-left form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span> disabled><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__left bl-phone-fill"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+      </code>
+    </div>
+    <div class="uikit__small-spacer uikit-code__rollable">
+      <span class="uikit-code__rollable-roller" @click="rollCode"><i class="bl-arrow-reverse-outline"></i></span>
+      <code :class="{'uikit-code__rollable-rollup': isCodeRolled}">
+        <span class="uikit-code__vue-variable">Text Input With Right Icon</span><br/><br/>
+        &#60;div class="form-group form-group__icon-right form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__right bl-search"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-right form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" value="Value" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__right bl-search"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-right form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form__error"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__right bl-search"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-right form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form__success"</span>><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__right bl-search"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-group__icon-right form-text"><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span> disabled><br/>
+        &emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__right bl-search"</span>>&#60;/i><br/>
+        &#60;/div><br/><br/>
+      </code>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Input Numeric</h4>
+  <div class="uikit-design">
+    <div class="uikit__small-spacer">
+      <div class="form-group form-numeric">
+        <span class="form-numeric-minus">
+          <i class="bl-minus"></i>
+        </span><input type="text"><span class="form-numeric-plus">
+          <i class="bl-plus"></i>
+        </span>
+      </div>
+    </div>
+    <div class="uikit-code">
+      <p>How to use</p>
+      <p class="uikit__small-description">Import form.scss to working css page</p>
+      <div class="uikit__small-spacer">
+        <code>
+          &#60;div class=<span class="uikit-code__vue-variable">"form-group form-numeric"</span>><br/>
+          &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-numeric-minus"</span>><br/>
+          &emsp;&emsp;&emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-minus"</span>>&#60;/i><br/>
+          &emsp;&emsp;&#60;/span>&#60;input type="text">&#60;span class=<span class="uikit-code__vue-variable">"form-numeric-plus"</span>><br/>
+          &emsp;&emsp;&emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-plus"</span>>&#60;/i><br/>
+          &emsp;&emsp;&#60;/span><br/>
+          &#60;/div><br/>
+        </code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="uikit-design blj-container">
+    <div class="row">
+      <div class="col-4 uikit__small-ver-spacer">
+          <h4>Text Input With Label</h4>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-text">
+              <label>Input Label</label>
+              <input type="text" placeholder="Placeholder" class="form">
+              <span class="form-label-message"></span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-text">
+              <label>Input Label</label>
+              <input type="text" placeholder="Placeholder" value="Value" class="form">
+              <span class="form-label-message"></span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-text">
+              <label>Input Label</label>
+              <input type="text" placeholder="Placeholder" value="Error" class="form form__error">
+              <span class="form-label-message">Error message</span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-text">
+              <label>Input Label</label>
+              <input type="text" placeholder="Placeholder" value="Success" class="form form__success">
+              <span class="form-label-message">Positive message</span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-text">
+              <label>Input Label</label>
+              <input type="text" placeholder="Placeholder" class="form" disabled>
+            </div>
+          </div>
+      </div>
+      <div class="col-4 uikit__small-ver-spacer">
+          <h4>Textarea Label</h4>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-textarea">
+              <label>Textarea</label>
+              <textarea placeholder="Placeholder" rows="4" class="form"></textarea>
+              <span class="form-label-message">&nbsp;</span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-textarea">
+              <label>Textarea</label>
+              <textarea placeholder="Placeholder" rows="4" class="form">Everybody good? Plenty of slaves for my robot colony? Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit sassss</textarea>
+              <span class="form-label-message">&nbsp;</span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-textarea">
+              <label>Textarea Input Label</label>
+              <textarea placeholder="Placeholder" rows="4" class="form"></textarea>
+              <span class="form-label-message">This is required field</span>
+            </div>
+          </div>
+      </div>
+      <div class="col-4 uikit__small-ver-spacer">
+          <h4>&nbsp;</h4>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-textarea">
+              <label style="float: left;">Textarea Input Label</label>
+              <span class="form-minimal-character">Min. 120 Characters</span>
+              <textarea placeholder="Placeholder" rows="4" class="form"></textarea>
+              <span class="form-label-message">This is required field</span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-textarea">
+              <label>Textarea Input Label</label>
+              <textarea placeholder="Placeholder" rows="4" class="form form__error">Everybody good</textarea>
+              <span class="form-label-message">Min. 120 Characters</span>
+            </div>
+          </div>
+          <div class="uikit__small-spacer">
+            <div class="form-group form-textarea">
+              <label>Textarea Input Label</label>
+              <textarea placeholder="Placeholder" rows="4" class="form" disabled>Everybody good? Plenty of slaves for my robot colony? - Interstellar</textarea>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="uikit-code">
+    <p>How to use</p>
+    <p class="uikit__small-description">Import form.scss to working css page</p>
+    <div class="uikit__small-spacer uikit-code__rollable">
+      <span class="uikit-code__rollable-roller" @click="rollCode"><i class="bl-arrow-reverse-outline"></i></span>
+      <code :class="{'uikit-code__rollable-rollup': isCodeRolled}">
+        <span class="uikit-code__vue-variable">Text Input With Label</span><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;label>Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;label>Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder"value="Value" class=<span class="uikit-code__vue-variable">"form"</span>><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;label>Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form__error"</span>><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>Error message&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;label>Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form form__success"</span>><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>Positive message&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-text"><br/>
+        &emsp;&emsp;&#60;label>Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;input type="text" placeholder="Placeholder" class=<span class="uikit-code__vue-variable">"form"</span> disabled><br/>
+        &#60;/div><br/><br/>
+      </code>
+    </div>
+    <div class="uikit__small-spacer uikit-code__rollable">
+      <span class="uikit-code__rollable-roller" @click="rollCode"><i class="bl-arrow-reverse-outline"></i></span>
+      <code :class="{'uikit-code__rollable-rollup': isCodeRolled}">
+        <span class="uikit-code__vue-variable">Textarea & Textarea With Label</span><br/><br/>
+        &#60;div class="form-group form-textarea"><br/>
+        &emsp;&emsp;&#60;textarea placeholder="Placeholder" rows="4" class=<span class="uikit-code__vue-variable">"form"</span>>&#60;/textarea><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-textarea"><br/>
+        &emsp;&emsp;&#60;textarea placeholder="Placeholder" rows="4" class=<span class="uikit-code__vue-variable">"form"</span>>Value&#60;/textarea><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-textarea"><br/>
+        &emsp;&emsp;&#60;label>Textarea Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;textarea placeholder="Placeholder" rows="4" class=<span class="uikit-code__vue-variable">"form"</span>>&#60;/textarea><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>This is required field&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-textarea"><br/>
+        &emsp;&emsp;&#60;label>Textarea Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-minimal-character"</span>>Min. 120 Characters&#60;/span><br/>
+        &emsp;&emsp;&#60;textarea placeholder="Placeholder" rows="4" class=<span class="uikit-code__vue-variable">"form"</span>>&#60;/textarea><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>This is required field&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-textarea"><br/>
+        &emsp;&emsp;&#60;label>Textarea Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;textarea placeholder="Placeholder" rows="4" class=<span class="uikit-code__vue-variable">"form form__error"</span>>Value&#60;/textarea><br/>
+        &emsp;&emsp;&#60;span class=<span class="uikit-code__vue-variable">"form-label-message"</span>>Min. 120 Characters&#60;/span><br/>
+        &#60;/div><br/><br/>
+        &#60;div class="form-group form-textarea"><br/>
+        &emsp;&emsp;&#60;label>Textarea Input Label&#60;/label><br/>
+        &emsp;&emsp;&#60;textarea placeholder="Placeholder" rows="4" class=<span class="uikit-code__vue-variable">"form"</span> disabled>Value&#60;/textarea><br/>
+        &#60;/div><br/><br/>
+      </code>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="uikit-design blj-container">
+    <div class="row">
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>Select Default</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-select">
+            <label>&nbsp;</label>
+            <div class="form-select-container">
+              <select class="form" required>
+                <option value="">Default</option>
+                <option value="2">Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-select">
+            <label>&nbsp;</label>
+            <div class="form-select-container">
+              <select class="form" required>
+                <option value="">Default</option>
+                <option value="2" selected>Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-select">
+            <label>&nbsp;</label>
+            <div class="form-select-container">
+              <select class="form" disabled>
+                <option value="">Disabled</option>
+                <option value="2">Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>Select with Icon</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-select">
+            <label>&nbsp;</label>
+            <div class="form-select-container">
+              <select class="form" required>
+                <option value="">Default</option>
+                <option value="2">Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+              <i class="bl-icon__left bl-calendar"></i>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-select">
+            <label>&nbsp;</label>
+            <div class="form-select-container">
+              <select class="form" required>
+                <option value="">Default</option>
+                <option value="2" selected>Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+              <i class="bl-icon__left bl-calendar"></i>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-group__icon-left form-select">
+            <label>&nbsp;</label>
+            <div class="form-select-container">
+              <select class="form" disabled>
+                <option value="">Disabled</option>
+                <option value="2">Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+              <i class="bl-icon__left bl-calendar"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>Select with Label</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-select">
+            <label>Select Label</label>
+            <div class="form-select-container">
+              <select class="form" required>
+                <option value="">Default</option>
+                <option value="2">Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-select">
+            <label>Select Label</label>
+            <div class="form-select-container">
+              <select class="form" required>
+                <option value="">Default</option>
+                <option value="2" selected>Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-select">
+            <label>Select Label</label>
+            <div class="form-select-container">
+              <select class="form" disabled>
+                <option value="">Disabled</option>
+                <option value="2">Selected</option>
+                <option value="3">Third Choice</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="uikit-code">
+    <p>How to use</p>
+    <p class="uikit__small-description">Import form.scss to working css page</p>
+    <div class="uikit__small-spacer uikit-code__rollable">
+      <span class="uikit-code__rollable-roller" @click="rollCode"><i class="bl-arrow-reverse-outline"></i></span>
+      <code :class="{'uikit-code__rollable-rollup': isCodeRolled}">
+        <span class="uikit-code__vue-variable">Select</span><br/><br/>
+        &#60;div class=<span class="uikit-code__vue-variable">"form-group form-select"</span>><br/>
+        &emsp;&emsp;&#60;div class=<span class="uikit-code__vue-variable">"form-select-container"</span>><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;select class=<span class="uikit-code__vue-variable">"form"</span> required><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="">Default&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="1">Selected&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="2">Third Choice&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;/select><br/>
+        &emsp;&emsp;&#60;/div><br/>
+        &#60;/div><br/><br/>
+        &#60;div class=<span class="uikit-code__vue-variable">"form-group form-select"</span>><br/>
+        &emsp;&emsp;&#60;div class=<span class="uikit-code__vue-variable">"form-select-container"</span>><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;select class=<span class="uikit-code__vue-variable">"form"</span> required><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="">Default&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="1" selected>Selected&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="2">Third Choice&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;/select><br/>
+        &emsp;&emsp;&#60;/div><br/>
+        &#60;/div><br/><br/>
+        &#60;div class=<span class="uikit-code__vue-variable">"form-group form-select"</span>><br/>
+        &emsp;&emsp;&#60;div class=<span class="uikit-code__vue-variable">"form-select-container"</span>><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;select class=<span class="uikit-code__vue-variable">"form"</span> disabled><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="">Default&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="1">Selected&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="2">Third Choice&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;/select><br/>
+        &emsp;&emsp;&#60;/div><br/>
+        &#60;/div><br/><br/>
+        <span class="uikit-code__vue-variable">Select with Icon</span><br/><br/>
+        &#60;div class=<span class="uikit-code__vue-variable">"form-group form-group__icon-left form-select"</span>><br/>
+        &emsp;&emsp;&#60;div class=<span class="uikit-code__vue-variable">"form-select-container"</span>><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;select class=<span class="uikit-code__vue-variable">"form"</span> required><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="">Default&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="1">Selected&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="2">Third Choice&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;/select><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;i class=<span class="uikit-code__vue-variable">"bl-icon__left bl-calendar"</span>>&#60;/i><br/>
+        &emsp;&emsp;&#60;/div><br/>
+        &#60;/div><br/><br/>
+        <span class="uikit-code__vue-variable">Select with Label</span><br/><br/>
+        &#60;div class=<span class="uikit-code__vue-variable">"form-group form-select"</span>><br/>
+        &emsp;&emsp;&#60;label>Select Label&#60;/label><br/>
+        &emsp;&emsp;&#60;div class=<span class="uikit-code__vue-variable">"form-select-container"</span>><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;select class=<span class="uikit-code__vue-variable">"form"</span> required><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="">Default&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="1">Selected&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#60;option value="2">Third Choice&#60;/option><br/>
+        &emsp;&emsp;&emsp;&emsp;&#60;/select><br/>
+        &emsp;&emsp;&#60;/div><br/>
+        &#60;/div><br/><br/>
+      </code>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom: 200px;">
+  <div class="uikit-design blj-container">
+    <div class="row">
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>Dropdown Default</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-dropdown">
+            <label>&nbsp;</label>
+            <div class="form-dropdown-container">
+              <p class="form">First</p>
+              <ul class="form-dropdown-list">
+                <li class="selected">First</li>
+                <li>Second</li>
+                <li>Third</li>
+                <li>Fourth</li>
+                <li>Fifth</li>
+                <li>Sixth</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 uikit__small-ver-spacer">
+        <h4>Dropdown Search</h4>
+        <div class="uikit__small-spacer">
+          <div class="form-group form-dropdown-search">
+            <label>&nbsp;</label>
+            <div class="form-dropdown-container">
+              <div class="form-group__icon-right form-text">
+                <input type="text" placeholder="Type something" class="form">
+                <i class="bl-icon__right bl-search"></i>
+              </div>
+              <ul class="form-dropdown-list">
+                <li class="selected">First</li>
+                <li>Second</li>
+                <li>Third</li>
+                <li>Fourth</li>
+                <li>Fifth</li>
+                <li>Sixth</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="uikit-code"></div>
+
+
+</section>
+
+<section id="form-dropdown" style="padding-bottom: 200px;">
+  <dropdown ref="dropdown" @handle-click="myMethod" :items="['pertama', 'kedua']"></dropdown>
+</section>

@@ -1,0 +1,29 @@
+@import 'dev-src/commons/styles/helpers/mixin';
+@import 'dev-src/commons/styles/helpers/variable_v1';
+@import 'dev-src/desktop/styles/components/tooltips';
+@import 'dev-src/desktop/styles/components/popovers';
+
+.icon-alert{
+  border: 1px solid $warning;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  color: $warning;
+  display: inline-block;
+  text-align: center;
+}
+
+.tooltips-link{
+  color: $warning;
+  text-decoration: underline;
+}
+
+.popover{
+  &-btn{
+    &--inline{
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+}

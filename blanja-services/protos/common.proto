@@ -1,0 +1,27 @@
+syntax = "proto3";
+package com.metraplasa.mobile.mainsite.proto;
+message Empty {
+    RequestMethod method =1;
+}
+message Response {
+    ResponseCode code =1;
+    string message=2;
+    string timestamp=3;
+}
+enum RequestMethod {
+    GET = 0;
+    POST = 1;
+    PUT = 2;
+    DELETE = 3;
+    OPTIONS = 4;
+    PATCH =5;
+}
+enum ResponseCode {
+    _200 = 0;
+    _400 = 1;
+    _403 = 2;
+    _404 = 3;
+    _500 = 4;
+    _503 = 5;
+    _504 = 6;
+}

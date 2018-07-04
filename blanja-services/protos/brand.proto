@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "common.proto";
+package com.metraplasa.mobile.mainsite.proto;
+service BrandService {
+    rpc getBrands(Empty) returns (BrandResponse){};
+}
+message BrandResponse{
+    Response status = 1;
+    message Brand {
+        string mobile_img = 1;
+        string mobile_link = 2;
+        string logo_img = 3;
+        string title = 4;
+        string description = 5;
+        int32 idx = 6;
+    }
+    repeated Brand data=2;
+}

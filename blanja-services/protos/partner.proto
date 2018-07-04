@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "common.proto";
+package com.metraplasa.mobile.mainsite.proto;
+service PartnerService {
+    rpc getPartnerPromo(Empty) returns (PartnerPromoResponse){};
+}
+message PartnerPromoResponse{
+    Response status =1;
+    message PartnerPromo {
+        string mobile_img = 1;
+        string mobile_link = 2;
+        string title = 3;
+        string description = 4;
+        int32 idx = 5;
+    }
+    repeated PartnerPromo data =2;
+}
