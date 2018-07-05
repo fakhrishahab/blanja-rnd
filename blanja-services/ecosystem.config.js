@@ -16,6 +16,9 @@ module.exports = {
       exec_interpreter : "babel-node",
       exec_mode : "cluster",
       args      : ["--presets es2015"],
+      env       : {
+        HOMEPATH : "$HOME",
+      },
       env_production : {
         NODE_ENV: 'production'
       },
