@@ -12,8 +12,9 @@ module.exports = {
       env: {
         COMMON_VARIABLE: 'true'
       },
-      watch     : true,
-      exec_interpreter : "babel-node",
+      watch     : false,
+      autorestart : false,
+      interpreter : "babel-node",
       exec_mode : "cluster",
       args      : ["--presets es2015"],
       env       : {
