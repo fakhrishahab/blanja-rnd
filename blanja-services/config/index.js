@@ -8,4 +8,4 @@ const config = {
     SERVER : '10.11.17.34:10001'
 }
 
-export default config;
+module.exports = config;

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "babel-node --presets es2015 server.js",
-    "pm2": "pm2 start npm -- dev"
+    "server": "pm2 start ./ecosystem.config.js",
+    "prod": "pm2 start ./ecosystem.config.js --env production --update-env"
   },
   "author": "",
   "license": "ISC",

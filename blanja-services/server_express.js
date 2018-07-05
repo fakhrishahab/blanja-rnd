@@ -1,14 +1,14 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import path from 'path';
-// import proxyConfig from './middleware/proxy-server';
-import compression from 'compression';
-import routeMenu from './routes/menu';
-import routeHome from './routes/homepage';
-import responseTime from 'response-time';
-import redisClients from './middleware/redis';
-import env from './middleware/env';
-import config from './config';
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+// const proxyConfig = require('./middleware/proxy-server';
+const compression = require('compression');
+const routeMenu = require('./routes/menu');
+const routeHome = require('./routes/homepage');
+const responseTime = require('response-time');
+const redisClients = require('./middleware/redis');
+const env = require('./middleware/env');
+const config = require('./config');
 const pid = process.pid;
 
 let app = express();

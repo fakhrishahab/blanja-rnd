@@ -7,4 +7,4 @@ let app = express();
 app
 .use('/menu', getMenu)
 
-export default app;
+module.exports = app;

@@ -1,4 +1,4 @@
-import cluster from 'cluster';
+const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 
 module.exports = function(){

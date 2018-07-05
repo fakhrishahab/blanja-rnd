@@ -10,4 +10,4 @@ app
 .use('/home', homepage)
 // .use('/home', getShortcut)
 
-export default app;
+module.exports = app;
