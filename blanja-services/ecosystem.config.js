@@ -17,7 +17,7 @@ module.exports = {
       exec_mode : "cluster",
       args      : ["--presets es2015"],
       env       : {
-        HOMEPATH : "$HOME",
+        HOMEPATH : "C:\Users\akhmad.fakhri\.pm2",
       },
       env_production : {
         NODE_ENV: 'production'
