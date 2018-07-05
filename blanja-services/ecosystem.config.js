@@ -19,6 +19,7 @@ module.exports = {
       args      : ["--presets es2015"],
       env       : {
         HOMEPATH : "C:\Users\akhmad.fakhri\.pm2",
+        HOME : "C:\Users\akhmad.fakhri\.pm2"
       },
       env_production : {
         NODE_ENV: 'production'
