@@ -13,7 +13,7 @@ module.exports = {
         COMMON_VARIABLE: 'true'
       },
       watch     : true,
-      exec_interpreter : "babel-node",
+      interpreter : "babel-node",
       exec_mode : "cluster",
       args      : ["--presets es2015"],
       env_production : {
