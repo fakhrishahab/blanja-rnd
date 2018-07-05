@@ -17,6 +17,19 @@ module.exports = {
       interpreter : "babel-node",
       exec_mode : "cluster",
       args      : ["--presets es2015"],
+      output: './out.log',
+      error: './error.log',
+	    log: './combined.outerr.log',
+      env       : {
+        NODE_ENV: 'development',
+        HOMEPATH : "C:\Users\akhmad.fakhri\.pm2",
+        HOME : "C:\Users\akhmad.fakhri\.pm2"
+      },
+      env_production : {
+        NODE_ENV: 'production',
+        HOMEPATH : "C:\Users\akhmad.fakhri\.pm2",
+        HOME : "C:\Users\akhmad.fakhri\.pm2"
+      },
       instances: 4
     },
 
