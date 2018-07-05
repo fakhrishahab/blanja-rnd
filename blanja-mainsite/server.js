@@ -1,18 +1,19 @@
+require('babel-register');
 const express = require('express');
 const app = express();
 const engine = require('ejs-locals');
-import config from './config';
-import compression from 'compression';
-import indexController from './controllers/index-controller.js';
-import {urlencoded, json} from 'body-parser';
-import minify from 'express-minify';
-import minifyHtml from 'express-html-minify';
+const config = require('./config');
+const compression = require('compression');
+const indexController = require('./controllers/index-controller.js');
+const {urlencoded, json} = require('body-parser');
+const minify = require('express-minify');
+const minifyHtml = require('express-html-minify');
 
-import env from './middleware/env';
-import proxyConfig from './middleware/http-proxy';
-import redisClient from './middleware/redis';
-import responseTime from 'response-time';
-import interceptor from './middleware/interceptor';
+const env = require('./middleware/env');
+const proxyConfig = require('./middleware/http-proxy');
+const redisClient = require('./middleware/redis');
+const responseTime = require('response-time');
+const interceptor = require('./middleware/interceptor');
 
 const isProd = process.env.NODE_ENV === 'production';
 

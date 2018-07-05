@@ -1,4 +1,4 @@
-function defineEnv(req, res, next){
+function env(req, res, next){
 	var PROFILE = {};
 
 	switch(process.env.NODE_ENV){
@@ -33,4 +33,4 @@ function defineEnv(req, res, next){
 	next();
 }
 
-export default defineEnv;
+module.exports = env;
