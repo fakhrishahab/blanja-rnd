@@ -23,6 +23,7 @@ route
                 }else{
                     res.redisClient.setex('slider_image', 3600, JSON.stringify(response.data));
                     res.json(response.data);
+                    // next();
                 }
             }else{
                 next();
@@ -55,6 +56,7 @@ route
                 }else{
                     res.redisClient.setex('shortcut_icon', 3600, JSON.stringify(response.data));
                     res.json(response.data);
+                    next();
                 }
             }else{
                 next();
@@ -83,6 +85,7 @@ route
                 }else{
                     res.redisClient.setex('daily_deals', 3600, JSON.stringify(response.data));
                     res.json(response.data);
+                    next();
                 }   
             }else{
                 next();
@@ -119,6 +122,7 @@ route
                 }else{
                     res.redisClient.setex('best_seller', 3600, JSON.stringify(response.data));
                     res.json(response.data);
+                    next();
                 }    
             }else{
                 next();
@@ -157,6 +161,7 @@ route
                 }else{
                     res.redisClient.setex('partner', 3600, JSON.stringify(response.data));
                     res.json(response.data);
+                    next();
                 }     
             }else{
                 next();
@@ -193,6 +198,7 @@ route
                 }else{
                     res.redisClient.setex('brand', 3600, JSON.stringify(response.data));
                     res.json(response.data);
+                    next();
                 }   
             }else{
                 next();
@@ -235,6 +241,7 @@ route
                 }else{         
                     res.redisClient.setex('hot_product_'+category, 3600, JSON.stringify(response.data));           
                     res.json(response.data);
+                    next();
                 }   
             }else{
                 next();
@@ -270,6 +277,7 @@ route
                 }else{       
                     res.redisClient.setex('wide_rolling', 3600, JSON.stringify(response.data));                        
                     res.json(response.data);
+                    next();
                 }   
             }else{
                 next();
