@@ -51,8 +51,8 @@ let taskList = [
 	'scss',
 	// 'vendors',
 	'images',
-	'uikit_scripts',
-	'uikit_scss',
+	// 'uikit_scripts',
+	// 'uikit_scss',
 	// 'uikit-watch-vue',
 	// 'watch-vue',
 	'watch'
