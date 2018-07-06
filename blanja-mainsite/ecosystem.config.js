@@ -14,12 +14,22 @@ module.exports = {
       },
       watch     : false,
       autorestart : false,
-      exec_interpreter : "babel-node",
+      interpreter : "babel-node",
       exec_mode : "cluster",
       args      : ["--presets es2015"],
+      output: 'C:/Users/akhmad.fakhri/.pm2/logs/out.log',
+      error: 'C:/Users/akhmad.fakhri/.pm2/logs/error.log',
+	    log: 'C:/Users/akhmad.fakhri/.pm2/logs/combined.outerr.log',
+      env       : {
+        NODE_ENV: 'development',
+        HOMEPATH : "C:/Users/akhmad.fakhri/.pm2",
+        HOME : "C:/Users/akhmad.fakhri/.pm2"
+      },
       env_production : {
-        NODE_ENV: 'production'
-      }
+        NODE_ENV: 'production',
+        HOMEPATH : "C:/Users/akhmad.fakhri/.pm2",
+        HOME : "C:/Users/akhmad.fakhri/.pm2"
+      },
     }
   ]
 
