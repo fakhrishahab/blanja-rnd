@@ -30,7 +30,7 @@ module.exports = {
         HOMEPATH : "C:/Users/akhmad.fakhri/.pm2",
         HOME : "C:/Users/akhmad.fakhri/.pm2"
       },
-      instances: 4
+      instances: 1
     },
 
     // Second application

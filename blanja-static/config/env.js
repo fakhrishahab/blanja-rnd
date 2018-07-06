@@ -7,7 +7,6 @@ var config = {
 	PORT_STATIC: 3000,
 	PORT_TEMPLATE : 4000,
 	PORT_PROD : 3000,
-
 	build: {
 		sourceMap : true,
 		compressionGzip : true,
@@ -21,4 +20,4 @@ var config = {
 
 var env = Object.assign(profile.default, config)
 
-export default env;
+module.exports = env;

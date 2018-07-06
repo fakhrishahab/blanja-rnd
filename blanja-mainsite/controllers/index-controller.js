@@ -9,7 +9,7 @@ function fetchSliderImage(req, res, next){
 			return response.data;
 		})
 		.catch(function(error){
-			next()
+			// next()
 		})
 }
 
@@ -19,13 +19,15 @@ var getSliderImage = function(req, res, next){
 			res.redisClient.get('slider_image', function(err, result){ 
 				try{
 					if(result){
-						resolve(JSON.parse(result))
+						resolve(JSON.parse(result));
+						// next();
 					}else{
 						resolve(fetchSliderImage(req, res, next));
+						// next();
 					}
 				} catch(err){
 					console.log(err);
-					next();
+					// next();
 				}
 				
 			});
@@ -40,7 +42,7 @@ function fetchShortcut(req, res, next){
 		return response.data;
 	})
 	.catch(function(error){
-		next()
+		// next()
 	})
 }
 
@@ -54,10 +56,11 @@ function getShortcut(req, res, next){
 						// next();
 					}else{
 						resolve(fetchShortcut(req, res, next));
+						// next();
 					}
 				} catch(err){
 					console.log(err);
-					next();
+					// next();
 				}
 				
 			});
@@ -85,7 +88,7 @@ route
 			})
 
 		return res.render('./pages/homepage', {
-			name: 'test',
+			// name: 'test',
 			sliderImage: sliderImage,
 			shortcutIcon : shortcut,
 			style: [

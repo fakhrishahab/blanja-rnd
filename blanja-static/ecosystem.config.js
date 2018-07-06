@@ -7,16 +7,14 @@ module.exports = {
 
     // First application
     {
-      name      : 'Blanja-Mainsite',
+      name      : 'Blanja-Static',
       script    : './server.js',
       env: {
         COMMON_VARIABLE: 'true'
       },
-      watch     : true,
+      watch     : false,
       autorestart : false,
-      interpreter : "babel-node",
       exec_mode : "cluster",
-      args      : ["--presets es2015"],
       output: 'C:/Users/akhmad.fakhri/.pm2/logs/out.log',
       error: 'C:/Users/akhmad.fakhri/.pm2/logs/error.log',
 	    log: 'C:/Users/akhmad.fakhri/.pm2/logs/combined.outerr.log',
@@ -30,8 +28,15 @@ module.exports = {
         HOMEPATH : "C:/Users/akhmad.fakhri/.pm2",
         HOME : "C:/Users/akhmad.fakhri/.pm2"
       },
-    }
-  ]
+      instance: 1
+    },
+
+    // Second application
+    // {
+    //   name      : 'WEB',
+    //   script    : 'web.js'
+    // }
+  ],
 
   /**
    * Deployment section

@@ -41,7 +41,7 @@ let taskList = [
 	'clean',
 	'clear',
 	// 'linting',
-	'global_server',
+	// 'global_server',
 	// 'create_server',
 	// 'template_server',
 	// 'commons_scripts',
@@ -51,8 +51,8 @@ let taskList = [
 	'scss',
 	// 'vendors',
 	'images',
-	// 'uikit_scripts',
-	// 'uikit_scss',
+	'uikit_scripts',
+	'uikit_scss',
 	// 'uikit-watch-vue',
 	// 'watch-vue',
 	'watch'
@@ -62,7 +62,7 @@ if(isProd || isStaging){
 	taskList = [
 		'clear',
 		'clean',
-		'global_server',
+		// 'global_server',
 		// 'commons_scripts',
 		// 'modular_scripts',
 		'pages_scripts',

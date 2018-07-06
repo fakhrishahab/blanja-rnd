@@ -1,5 +1,5 @@
 var express = require('express');
-
+const path = require('path');
 let route = express.Router();
 
 route
@@ -13,6 +13,7 @@ route
 	req.url = req.url + '.gz';
 	res.set("Content-Type", "text/css");
 	res.set("Content-Encoding", "gzip");
+	console.log(req.url);
 	next();
 })
 .get('*.woff', function(req, res, next){

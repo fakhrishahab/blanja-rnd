@@ -19,7 +19,8 @@ export function create_server(){
 			res.header('Cache-Control', 'public, max-age=31557600');
 			next();
 		})
-		.use(isProd ? assetsRouting : function(req, res, next){next()})
+		.use(assetsRouting)
+		// .use(isProd ? assetsRouting : function(req, res, next){next()})
 		.use(express.static('./dist'))		
 		.use('/node_modules', express.static('./node_modules'))
 		.set('views', './views')
